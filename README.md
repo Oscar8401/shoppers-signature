@@ -30,3 +30,19 @@ npm run e2e
 # run all tests
 npm test
 ```
+
+
+## Also important
+
+If any erros occur during build/test, try these commands:
+
+``` bash
+# install webpack
+npm install -g webpack
+
+# install webpack-dev-server
+npm install -g webpack-dev-server
+
+# install vue-cli
+npm install -g vue-cli
+```
