@@ -34,7 +34,7 @@ npm test
 
 ## Also important
 
-If any erros occur during build/test, try these commands:
+If any errors occur during build/test, try these commands:
 
 ``` bash
 # install webpack
