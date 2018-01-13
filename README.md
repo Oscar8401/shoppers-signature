@@ -2,17 +2,17 @@
 
 Hello Shoppers! This is your email signature generator! :boom:  
 
-To use it, access [The Shoppers' Signature](https://jlozovei.github.io/shoppers-signature/), enter yout data and copy the result to your email signature! Simple, isn't it?  
+To use it, access [The Shoppers' Signature](https://jlozovei.github.io/shoppers-signature/), enter your data, hit `Copy to clipboard` and paste the result into your email signature! Simple, isn't it?  
 
-Made with [Vue.js](https://vuejs.org/) and styled by [@jlozovei](https://github.com/jlozovei).
+Made with [Vue.js](https://vuejs.org/) and styled by [@jlozovei](https://github.com/jlozovei).  
 
-## Build Setup (for developers)
+## Build and Test setup (for developers)
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:3000
 npm run dev
 
 # build for production with minification
