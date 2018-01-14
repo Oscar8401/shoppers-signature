@@ -2,15 +2,15 @@
 	<div class="form card">
 		<div class="form__row">
 			<label class="form__label" for="name">Name</label>
-			<input type="text" placeholder="What is your name?" id="name" name="name" class="form__input--text" v-model="name">
+			<input type="text" placeholder="What is your name?" id="name" name="name" class="form__input--text" v-model="customName" @keyup="updateName">
 		</div>
 		<div class="form__row">
 			<label class="form__label" for="position">Position</label>
-			<input type="text" placeholder="What is your position?" id="position" name="position" class="form__input--text" v-model="position">
+			<input type="text" placeholder="What is your position?" id="position" name="position" class="form__input--text" v-model="customPosition" @keyup="updatePosition">
 		</div>
 		<div class="form__row">
 			<label class="form__label" for="phone">Phone number</label>
-			<input type="text" placeholder="Eg. +55 41 3333-3333" id="phone" name="phone" class="form__input--text" v-model="phone">
+			<input type="text" placeholder="Eg. +55 41 3333.3333" id="phone" name="phone" class="form__input--text" v-model="customPhone" @keyup="updatePhone">
 		</div>
 	</div>
 </template>
@@ -19,21 +19,28 @@
 export default {
   name: 'Form',
   props: ['name', 'position', 'phone'],
-  computed: {
-  	customName(string){
-			return this.name = string;
+  data: function () {
+    return {
+        customName: this.name,
+        customPosition: this.position,
+        customPhone: this.phone,
+    }
+	},
+	methods: {
+		updateName(event){
+			this.$emit('updateData', { name: event.target.value, position: this.customPosition, phone: this.customPhone })
 		},
-		customPosition(string){
-			return this.position = string;
+		updatePosition(event){
+			this.$emit('updateData', { name: this.customName, position: event.target.value, phone: this.customPhone })
 		},
-		customPhone(string){
-			return this.phone = string;
+		updatePhone(event){
+			this.$emit('updateData', { name: this.customName, position: this.customPosition, phone: event.target.value })
 		}
-  }
+	}
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .form{
 	.form__row{
 		margin-bottom: 20px;

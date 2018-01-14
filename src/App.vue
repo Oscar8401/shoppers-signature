@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
-    <Preview v-bind:name="name" v-bind:position="position" v-bind:phone="phone" />
-    <Form v-bind:name="name" v-bind:position="position" v-bind:phone="phone" />
+    <Preview :name="name" :position="position" :phone="phone" />
+    <Form :name="name" :position="position" :phone="phone" @updateData="updateData" />
   </div>
 </template>
 
@@ -9,30 +9,29 @@
 import Preview from './components/Preview'
 import Form from './components/Form'
 
+const staticData = {
+	name: 'Mylena Gama',
+	position: 'Marketing Coordinator',
+	phone: '+55 41 99672.5527'
+}
+
 export default {
   name: 'App',
   data () {
 		return {
-			name: 'Mylena Gama',
-  		position: 'Marketing Coordinator',
-  		phone: '+55 41 99672.5527'
+			name: staticData.name,
+  		position: staticData.position,
+  		phone: staticData.phone
 		}
 	},
-	computed: {
-		customName(string){
-			return this.name = string;
-		},
-		customPosition(string){
-			return this.position = string;
-		},
-		customPhone(string){
-			return this.phone = string;
+	methods: {
+		updateData(obj){
+			this.name = obj.name != '' ? obj.name : staticData.name;
+			this.position = obj.position != '' ? obj.position : staticData.position;
+			this.phone = obj.phone != '' ? obj.phone : staticData.phone;
 		}
 	},
-  components: {
-    Preview,
-    Form
-  }
+  components: { Preview, Form }
 }
 </script>
 
