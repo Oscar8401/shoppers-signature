@@ -31,6 +31,7 @@ npm run e2e
 npm test
 ```
 
+For some reason (yet) I don't know why, when running local server for development `Signature.vue` module is taking to long to compile/build - maybe it's the html markup for the signature (email marketing tables), or maybe it's something else. :worried:  
 
 ## Also important
 
