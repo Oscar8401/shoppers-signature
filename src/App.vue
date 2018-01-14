@@ -23,8 +23,7 @@ export default {
 		return {
 			name: staticData.name,
   		position: staticData.position,
-  		phone: staticData.phone,
-  		snackbarState: false
+  		phone: staticData.phone
 		}
 	},
 	methods: {
