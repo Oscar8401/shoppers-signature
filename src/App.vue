@@ -52,7 +52,7 @@ html, body{
 }
 
 body {
-  margin: 0;
+  margin: 1em 0;
   background-color: #f6f5f9;
   background: -webkit-linear-gradient(to bottom, #f6f5f9, #e5e7e9);
   background: linear-gradient(to bottom, #f6f5f9, #e5e7e9);
@@ -79,9 +79,11 @@ body {
 .card{
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
-  padding: 2em;
-  margin: 2rem;
+  padding: 1.5em;
   background-color: #fff;
   border-radius: 2px;
+
+  &.preview{ margin: 0 0 1.5rem 0; }
+  &.form{ margin: 0; }
 }
 </style>
