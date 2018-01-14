@@ -2,7 +2,7 @@
 
 Hello Shoppers! This is your email signature generator! :boom:  
 
-To use it, access [The Shoppers' Signature](https://jlozovei.github.io/shoppers-signature/), enter your data, hit `Copy to clipboard` and paste the result into your email signature! Simple, isn't it?  
+To use it, access [The Shoppers' Signature](https://jlozovei.github.io/shoppers-signature/), enter your data, hit `Copy to clipboard` and paste the result into your email client! Simple, isn't it?  
 
 Made with [Vue.js](https://vuejs.org/) and styled by [@jlozovei](https://github.com/jlozovei).  
 

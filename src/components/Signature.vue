@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="signature__copy">
 		<table cellpadding="0" cellspacing="0" width="300" style="border: 0px; margin: 0px; padding: 0px 10px;">
 			<tbody>
 				<tr>

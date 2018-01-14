@@ -4,10 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import clipboard from 'vue-clipboards'
-
 Vue.config.productionTip = false
-Vue.use(clipboard)
 
 /* eslint-disable no-new */
 new Vue({
