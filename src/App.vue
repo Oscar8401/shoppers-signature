@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
-    <Preview />
-    <Form />
+    <Preview v-bind:name="name" v-bind:position="position" v-bind:phone="phone" />
+    <Form v-bind:name="name" v-bind:position="position" v-bind:phone="phone" />
   </div>
 </template>
 
@@ -11,6 +11,24 @@ import Form from './components/Form'
 
 export default {
   name: 'App',
+  data () {
+		return {
+			name: 'Mylena Gama',
+  		position: 'Marketing Coordinator',
+  		phone: '+55 41 99672.5527'
+		}
+	},
+	computed: {
+		customName(string){
+			return this.name = string;
+		},
+		customPosition(string){
+			return this.position = string;
+		},
+		customPhone(string){
+			return this.phone = string;
+		}
+	},
   components: {
     Preview,
     Form

@@ -28,19 +28,19 @@
 																					</tr>
 																					<tr>
 																						<td style="color: rgb(51, 51, 51); padding-bottom: 2px;">
-																							<span style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.4px; line-height: 28px;">Mylena Gama</span>
+																							<span style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.4px; line-height: 28px;">{{name}}</span>
 																						</td>
 																					</tr>
 																					<tr>
 																						<td style="color: rgb(51, 51, 51); padding-bottom: 5px;">
-																							<span style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 100; letter-spacing: -0.4px;">Marketing Coordinator</span>
+																							<span style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 100; letter-spacing: -0.4px;">{{position}}</span>
 																						</td>
 																					</tr>
 																					<tr>
 																						<td style="padding-top: 4px;">
 																							<img src="https://raw.githubusercontent.com/jlozovei/shoppers-signature/vue-webpack/assets/phone.png" alt="" style="max-width: 16px; width: 16px; height: 16px;">
 																							<span class="tel" style="padding-left: 8px; font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; letter-spacing: 0.4px; color: rgb(51, 51, 51); vertical-align: middle; text-decoration: none;">
-																								<a href="tel:+55 41 99672-5527" style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 100; letter-spacing: -0.4px; color: rgb(51, 51, 51); text-decoration: none;">+55 41 99672.5527</a>
+																								<a :href="phoneLink" style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 100; letter-spacing: -0.4px; color: rgb(51, 51, 51); text-decoration: none;">{{phone}}</a>
 																							</span>
 																						</td>
 																					</tr>
@@ -68,6 +68,26 @@
 
 <script>
 export default {
-  name: 'Signature'
+  name: 'Signature',
+  props: ['name', 'position', 'phone'],
+  /*data() {
+  	return {
+  		phoneLink: phone.replace(/\./g,'-')
+  	}
+  },*/
+  computed: {
+  	phoneLink(){
+  		return this.phone.replace(/\./g,'-')
+  	},
+  	customName(string){
+			return this.name = string;
+		},
+		customPosition(string){
+			return this.position = string;
+		},
+		customPhone(string){
+			return this.phone = string;
+		}
+  }
 }
 </script>
