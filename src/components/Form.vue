@@ -27,13 +27,13 @@ export default {
     }
 	},
 	methods: {
-		updateName(event){
+		updateName(event) {
 			this.$emit('updateData', { name: event.target.value, position: this.customPosition, phone: this.customPhone })
 		},
-		updatePosition(event){
+		updatePosition(event) {
 			this.$emit('updateData', { name: this.customName, position: event.target.value, phone: this.customPhone })
 		},
-		updatePhone(event){
+		updatePhone(event) {
 			this.$emit('updateData', { name: this.customName, position: this.customPosition, phone: event.target.value })
 		}
 	}
@@ -59,6 +59,7 @@ export default {
 		transition: all ease-in-out 200ms;
 		display: block;
 		width: 100%;
+		font-size: .8em;
 
 		&:focus{
 			border-color: #394b64;

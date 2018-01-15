@@ -1,7 +1,5 @@
 <template>
-	<div class="snackbar" id="snackbar">
-		Great! Now paste it on your email client. &#x1F4A5;
-	</div>
+	<div class="snackbar" id="snackbar">Great! Now paste it on your email client. &#x1F4A5;</div>
 </template>
 
 <script>
