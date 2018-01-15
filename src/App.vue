@@ -38,11 +38,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
 
 *, :before, :after {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html, body{
