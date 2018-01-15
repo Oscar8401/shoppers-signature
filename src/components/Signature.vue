@@ -28,19 +28,19 @@
 																					</tr>
 																					<tr>
 																						<td style="color: rgb(51, 51, 51); padding-bottom: 2px;">
-																							<span style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.4px; line-height: 28px;">{{name}}</span>
+																							<span style="font-family: &quot;Roboto&quot;, Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: -0.4px; line-height: 28px;">{{name}}</span>
 																						</td>
 																					</tr>
 																					<tr>
 																						<td style="color: rgb(51, 51, 51); padding-bottom: 5px;">
-																							<span style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 100; letter-spacing: -0.4px;">{{position}}</span>
+																							<span style="font-family: &quot;Roboto&quot;, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 100; letter-spacing: -0.4px;">{{position}}</span>
 																						</td>
 																					</tr>
 																					<tr>
 																						<td style="padding-top: 4px;">
 																							<img src="https://raw.githubusercontent.com/jlozovei/shoppers-signature/vue-webpack/assets/phone.png" alt="" style="max-width: 16px; width: 16px; height: 16px;">
-																							<span class="tel" style="padding-left: 8px; font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; letter-spacing: 0.4px; color: rgb(51, 51, 51); vertical-align: middle; text-decoration: none;">
-																								<a :href="linkPhone" style="font-family: &quot;Open Sans&quot;, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 100; letter-spacing: -0.4px; color: rgb(51, 51, 51); text-decoration: none;">{{phone}}</a>
+																							<span class="tel" style="padding-left: 8px; font-family: &quot;Roboto&quot;, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; letter-spacing: 0.4px; color: rgb(51, 51, 51); vertical-align: middle; text-decoration: none;">
+																								<a :href="linkPhone" style="font-family: &quot;Roboto&quot;, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 100; letter-spacing: -0.4px; color: rgb(51, 51, 51); text-decoration: none;">{{phone}}</a>
 																							</span>
 																						</td>
 																					</tr>
