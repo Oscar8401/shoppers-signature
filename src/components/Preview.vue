@@ -21,33 +21,35 @@ export default {
   name: 'Preview',
   props: ['name', 'position', 'phone'],
   computed: {
-  	customName(){
-  		return this.name;
+  	customName() {
+  		return this.name
   	},
-  	customPosition(){
-  		return this.position;
+  	customPosition() {
+  		return this.position
   	},
-  	customPhone(){
-  		return this.phone;
+  	customPhone() {
+  		return this.phone
   	},
-  	linkPhone(){
-  		return `tel:${this.phone.replace(/\./g,'-')}`
+  	linkPhone() {
+  		return `tel:${this.phone.replace(/\./g, '-')}`
   	}
   },
   methods: {
-  	copySignature(event){
-  		let range = document.createRange();
-			range.selectNode(document.getElementById('signature__copy'));
-			window.getSelection().addRange(range);
+  	copySignature(event) {
+  		let range = document.createRange()
+			range.selectNode(document.getElementById('signature__copy'))
+			window.getSelection().addRange(range)
 
-  		document.execCommand('copy');
+  		document.execCommand('copy')
 
-  		document.getElementById('snackbar').classList.add('snackbar--active');
+  		if(document.execCommand('copy')){
+  			document.getElementById('snackbar').classList.add('snackbar--active')
 
-  		setTimeout(() => {
-  			document.getElementById('snackbar').classList.remove('snackbar--active');
-  			window.getSelection().removeAllRanges()
-  		}, 4200)
+	  		setTimeout(() => {
+	  			document.getElementById('snackbar').classList.remove('snackbar--active')
+	  			window.getSelection().removeAllRanges()
+	  		}, 4200)	
+  		}
   	}
   },
   components: { Signature }
@@ -72,6 +74,7 @@ export default {
 	text-align: center;
 	cursor: pointer;
 	position: relative;
+	font-size: 1.2em;
 
 	&:focus{ outline: none; }
 
