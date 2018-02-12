@@ -28,9 +28,9 @@ export default {
 	},
 	methods: {
 		updateData(obj) {
-			this.name = obj.name != '' ? obj.name : staticData.name
-			this.position = obj.position != '' ? obj.position : staticData.position
-			this.phone = obj.phone != '' ? obj.phone : staticData.phone
+			this.name = obj.name !== '' ? obj.name : staticData.name
+			this.position = obj.position !== '' ? obj.position : staticData.position
+			this.phone = obj.phone !== '' ? obj.phone : staticData.phone
 		}
 	},
   components: { Preview, Form, Snackbar }

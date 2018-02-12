@@ -34,22 +34,31 @@ export default {
   		return `tel:${this.phone.replace(/\./g, '-')}`
   	}
   },
+  mounted() {
+  	this.clearRange()
+  },
   methods: {
   	copySignature(event) {
+  		this.clearRange()
+
   		let range = document.createRange()
-			range.selectNode(document.getElementById('signature__copy'))
-			window.getSelection().addRange(range)
+
+		range.selectNode(document.getElementById('signature__copy'))
+		window.getSelection().addRange(range)
 
   		document.execCommand('copy')
 
-  		if(document.execCommand('copy')){
+  		if(document.execCommand('copy')) {
   			document.getElementById('snackbar').classList.add('snackbar--active')
 
 	  		setTimeout(() => {
 	  			document.getElementById('snackbar').classList.remove('snackbar--active')
-	  			window.getSelection().removeAllRanges()
-	  		}, 4200)	
+	  			this.clearRange()
+	  		}, 4200)
   		}
+  	},
+  	clearRange() {
+  		window.getSelection().removeAllRanges()
   	}
   },
   components: { Signature }

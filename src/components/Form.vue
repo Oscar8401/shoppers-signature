@@ -17,14 +17,14 @@
 
 <script>
 export default {
-  name: 'Form',
-  props: ['name', 'position', 'phone'],
-  data: function () {
-    return {
-        customName: this.name,
-        customPosition: this.position,
-        customPhone: this.phone,
-    }
+	name: 'Form',
+	props: ['name', 'position', 'phone'],
+	data: function () {
+    	return {
+	        customName: this.name,
+	        customPosition: this.position,
+	        customPhone: this.phone
+		}
 	},
 	methods: {
 		updateName(event) {
